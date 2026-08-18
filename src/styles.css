@@ -153,3 +153,36 @@
     color: var(--color-foreground);
   }
 }
+
+@utility gradient-primary {
+  background-image: var(--gradient-primary);
+}
+
+@utility gradient-soft {
+  background-image: var(--gradient-soft);
+}
+
+@utility shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+@utility shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+@utility text-gradient {
+  background-image: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
