@@ -86,18 +86,18 @@ function ContactPage() {
             <div>
               <Label htmlFor="name">Nom complet</Label>
               <Input id="name" name="name" maxLength={100} className="mt-2" />
-              {errors.name && <p className="mt-1 text-xs text-destructive">{errors.name}</p>}
+              {errors["name"] && <p className="mt-1 text-xs text-destructive">{errors["name"]}</p>}
             </div>
             <div className="grid gap-5 sm:grid-cols-2">
               <div>
                 <Label htmlFor="email">Email</Label>
                 <Input id="email" name="email" type="email" maxLength={255} className="mt-2" />
-                {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email}</p>}
+                {errors["email"] && <p className="mt-1 text-xs text-destructive">{errors["email"]}</p>}
               </div>
               <div>
                 <Label htmlFor="phone">Téléphone</Label>
                 <Input id="phone" name="phone" maxLength={30} className="mt-2" />
-                {errors.phone && <p className="mt-1 text-xs text-destructive">{errors.phone}</p>}
+                {errors["phone"] && <p className="mt-1 text-xs text-destructive">{errors["phone"]}</p>}
               </div>
             </div>
             <div>
@@ -118,8 +118,8 @@ function ContactPage() {
             <div>
               <Label htmlFor="message">Message</Label>
               <Textarea id="message" name="message" rows={5} maxLength={1000} className="mt-2" />
-              {errors.message && (
-                <p className="mt-1 text-xs text-destructive">{errors.message}</p>
+              {errors["message"] && (
+                <p className="mt-1 text-xs text-destructive">{errors["message"]}</p>
               )}
             </div>
             <Button type="submit" variant="hero" size="lg" className="w-full">
